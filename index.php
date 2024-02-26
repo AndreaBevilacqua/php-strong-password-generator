@@ -1,4 +1,11 @@
 <?php
+
+$length = $_GET['length'] ?? '';
+
+if(!empty($length)){
+    $password = generate_password($length);
+}
+
 function generate_password($length){
 
     $password = '';
