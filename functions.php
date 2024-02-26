@@ -19,5 +19,7 @@ function generate_password($length){
         $password .= $random_character;
     }
 
-    return $password;
+    session_start();
+    $_SESSION['password'] = $password;
+    return;
 }

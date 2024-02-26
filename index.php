@@ -5,7 +5,9 @@ require __DIR__ . '/functions.php';
 $length = $_GET['length'] ?? '';
 
 if(!empty($length)){
-    $password = generate_password($length);
+    generate_password($length);
+
+    header('Location: success.php');
 }
 
 ?>
@@ -23,12 +25,6 @@ if(!empty($length)){
 
 <body class="container mt-5">
     <h1 class="mb-4">Strong Password Generator</h1>
-
-    <?php if(isset($password)): ?>
-        <div class="alert alert-info">
-            La password generata é : <strong><?= $password ?></strong>
-        </div>
-    <?php endif; ?>
     <form action="index.php" method="get">
         <div class="form-group">
             <label for="length">Password Length:</label>

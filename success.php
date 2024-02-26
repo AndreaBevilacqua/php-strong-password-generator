@@ -18,9 +18,11 @@ if(isset($_SESSION['password'])){
     <title>Document</title>
 </head>
 <body>
-<div class="alert alert-info">
+    <div class="container mt-4">
+        <div class="alert alert-info">
             La password generata é : <strong><?= $password ?></strong>
         </div>
-    
+    </div>
+        
 </body>
 </html>
