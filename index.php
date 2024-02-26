@@ -28,7 +28,7 @@ if(!empty($length)){
     <form action="index.php" method="get">
         <div class="form-group">
             <label for="length">Password Length:</label>
-            <input type="number" class="form-control" id="length" name="length" min="5" value="<?= $length ?? 5?>" step="1">
+            <input type="number" class="form-control" id="length" name="length" min="5" value="<?= $_GET['length'] ?? 5?>" step="1">
         </div>
         <button type="submit" class="btn btn-primary my-4">Generate Password</button>
     </form>
